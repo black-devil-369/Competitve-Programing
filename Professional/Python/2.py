@@ -85,8 +85,8 @@ def draw_chakra():
         oogway.left(15)
         oogway.pendown()
         oogway.forward(chakra_radius)
-  
-    
+        
+        
 
 # start after 5 seconds.
 time.sleep(0)
