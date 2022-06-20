@@ -1,6 +1,9 @@
 #include<bits/stdc++.h>
 using namespace std;
 int main(){
+    // These two line used  for Fastest Input
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
     int n,c;
     cin>>n;
     int size[n];

@@ -4,7 +4,7 @@ int main(){
     int n,k;
     cin>>n>>k;
     int multi_Dimensionalarray[n][k];
-    cout<<"Enter the for Multi Dimensional Arrasys"<<endl;
+    cout<<"Enter the Element for Multi Dimensional Arrasys"<<endl;
     for(int i=0;i<n;i++){
         for(int j=0;j<k; j++){
             cin>>multi_Dimensionalarray[i][j];

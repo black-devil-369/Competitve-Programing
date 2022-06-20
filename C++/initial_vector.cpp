@@ -2,6 +2,9 @@
 #include<vector>
 using namespace std;
 int main(){
+    // These two line wirte for fast input performance take palce
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
     // create a empty vector and add element by push_back() method
     int n;
     cout<<"Enter the size for Vector"<<endl;
