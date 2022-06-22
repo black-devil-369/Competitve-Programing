@@ -1,0 +1,14 @@
+body{
+    background-color:whitesmoke;
+}
+h1{color:tomato;
+    background-color:lawngreen;
+}
+p{
+    color: teal;
+    text-size-adjust:60px;
+}
+form{
+    color: aqua;
+    text-decoration-color: blue;
+}

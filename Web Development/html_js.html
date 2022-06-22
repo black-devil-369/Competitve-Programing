@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title> write a code of js inside of Html page</title>
+    </head>
+    <body>
+        <script>
+            let person ={
+                name:"Ajay Chauhan",
+                age: 19
+            }
+            document.write("Name ="+person.name +'</br>');
+            document.write("age ="+person['age']);
+            for(let key in person){
+                alert(key);
+                alert(person[key])
+            }
+        </script>
+    </body>
+</html>

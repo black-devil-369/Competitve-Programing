@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en Us">
+    <head>
+        <title>
+            Page Desing
+        </title>
+        <style>
+            a:link {
+              color: green;
+              background-color: transparent;
+              text-decoration: none;
+            }
+            
+            a:visited {
+              color: pink;
+              background-color: transparent;
+              text-decoration: none;
+            }
+            
+            a:hover {
+              color: red;
+              background-color: transparent;
+              text-decoration: underline;
+            }
+            
+            a:active {
+              color: yellow;
+              background-color: transparent;
+              text-decoration: underline;
+            }
+            </style> 
+    </head>
+    <body>
+        <h2 id="C4">Chapter 4</h2><!-- to link chapeter-->
+        <a href="#C4">Jump to Chapter 4</a> 
+        <img src="pic_trulli.jpg" alt="Italian Trulli">
+        <img src="workplace.jpg" alt="Workplace" usemap="#workmap">
+
+        <map name="workmap">
+            <area shape="circle" coords="337,300,44" href="coffee.htm" onclick="myFunction()">
+          </map>
+          
+          <script>
+          function myFunction() {
+            alert("You clicked the coffee cup!");
+          }
+          </script> 
+    </body>
+</html>
