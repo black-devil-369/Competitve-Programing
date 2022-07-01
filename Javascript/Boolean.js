@@ -1,0 +1,14 @@
+var obj = new Boolean(6);
+var obj1 = new Boolean("true");
+var obj2 = new Boolean(53);
+var obj3 = new Boolean(false);
+var obj4 = new Boolean(643);
+var obj5 = new Boolean(0);
+//var obj6 = new Boolean(AjayChauhan);
+console.log(obj6.valueOf());
+console.log(obj5.valueOf());
+console.log(obj4.valueOf());
+console.log(obj3.toString());
+console.log(obj2.toString());
+console.log(obj.toString());
+console.log(obj.toString());
