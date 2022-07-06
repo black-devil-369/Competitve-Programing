@@ -7,6 +7,8 @@
 #include<utility>
 using namespace std;
 int main(){
+    ios_base::sync_with_stdio(false);
+    cin.tie(0);
     pair<int ,string>Part1 = make_pair(434,"AjayChauhan");
     pair<int , string>Part2 = make_pair(9,"Jai Bhavani");
     pair<int, int>Part3 =make_pair(3,4);

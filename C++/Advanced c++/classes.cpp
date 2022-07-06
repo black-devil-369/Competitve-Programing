@@ -88,12 +88,30 @@ class patern{
         }
 
     }
+    void loop(){
+        int n;
+        cin>>n;
+        for(int i=1; i<=n; i++){
+            for(int j=1; j<=n; j++){
+                if(){
+                    cout<<" ";
+                }
+                else{
+                    cout<<" * ";
+                }
+            }
+            cout<<endl;
+        }
+    }
 };
 int main()
 {
+    ios_base::sync_with_stdio(false);
+    cin.tie(0);
     patern p1;
     p1.ajay();
     p1.jay();
     p1.bond();
+    p1.loop();
     return 0;
 }
