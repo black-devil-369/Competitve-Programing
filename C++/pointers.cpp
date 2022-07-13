@@ -5,7 +5,12 @@ void fun(int& x){
 }
 int main(){
     int x = 343;
-    cout<<"The value of another x before fun funtion is call= "<<x<<endl;
+    int c = 53;
+    int *d;
+    d = &c;
+
+    cout<<"Value of d:"<<&c<<endl;
+    cout<<"The value of other x before fun funtion is call= "<<x<<endl;
      fun(x);
     cout<<"The value of x is:"<<x<<endl;
     return 0;
