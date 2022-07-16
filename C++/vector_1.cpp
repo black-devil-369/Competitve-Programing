@@ -14,6 +14,11 @@ int main(){
         cout<<*i<< " ";
     }
     cout<<" "<<endl;
+    cout<<"After the pushing new element in g1 vector"<<endl;
+    g1.push_back(89);
+    for(auto &k:g1){
+        cout<<k<<endl;
+    }
     cout<<"Output of cbegin"<<endl;
     for(auto i= g1.cbegin(); i!=g1.cend();++i){
         cout<<*i<<" ";

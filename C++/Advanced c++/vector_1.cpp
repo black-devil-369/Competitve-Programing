@@ -26,20 +26,20 @@ int main(){
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
     int x,y;
-    cout<<"Enter the size of vector"<<endl;
-    cin>>x;
-    vector<int>z;
+    cout<<"Enter the size of vector"<<endl;// Enter from user-keyboard to declare the size of vector
+    cin>>x; // Way of taking input from user
+    vector<int>z;// vector declaration 
     cout<<"Enter the element inside a vector"<<endl;
     for(int i=0;i<x;i++){
         cin>>y;
-        z.push_back(y);
+        z.push_back(y);// add or store elment in given vector
     }
     cout<<"Element inside a vector Enter by You"<<endl;
     for(auto &j:z){
-        cout<<j<<" ";
+        cout<<j<<" "; // print vector Element on screen
     }
     cout<<endl;
-    sort(z.begin(),z.end());
+    sort(z.begin(),z.end());// method is used for sort vector in accending order
     cout<<"Sorted Vector Elements"<<endl;
     for(auto &k:z){
         cout<<k<<" ";
