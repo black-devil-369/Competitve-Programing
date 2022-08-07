@@ -1,0 +1,5 @@
+Name = c("Ajay", "Shweta", "Akash", "Anjali")
+Age = c(20, 21, 14, 12)
+Language = c("Hindi", "English", "Bhojopuri", "Marathi")
+b = data.frame(Name, Age, Language)
+print(b)
