@@ -38,4 +38,5 @@ int main(){
     cout<<" "<<endl;
     cout<<"Sorted Arrays"<<endl;
     printedarrays(A,k);
+    
 }
