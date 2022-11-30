@@ -5,7 +5,7 @@ print("Array 1 rank list: ", end = " ")
 print(arr)
 # Creating a rank 2 Array
 arr = np.array([[34,63,62],
-                [36,74,14]])
+               [36,74,14]])
 print("Array of 2 rank list: ", end = "")
 print(arr)
 # Creating a Array from tuple
