@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>welcome to webpage</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <script src="index.js">
+        let a =534;
+        console.log(a);
+    </script>
+    <!--<script src="..\[folder_name]\[file_Name]""></script> -- link of javascript file-->
+    <form>
+        <fieldset>
+            <legend>Personal Details</legend>
+            <p>
+                <label>First Name:<input name="firstname"/></label>
+            </p>
+            <p>
+                <label>Last Name:<input name="lastName"/></label>
+            </p>
+            <!--label of radio element-->
+            <p>
+                <label><input type="radio" name="gender" value="male"/>Male</label>
+                <label><input type="radio" name="gender" value="female"/>Female</label>
+            </p>
+            <p>
+                <label>Email:<input type="email" name="email/"/></label>
+            </p>
+            <p>
+                <label>Date of Birth<input type="date" name="dateofbirth"/></label>
+            </p>
+            <p>
+                <!--textarea button-->
+                <label>Address:
+                    <br/>
+                    <textarea name="address" cols="30" rows="3"></textarea>
+                </label>
+            </p>
+            <!--Creting a buttom by button element-->
+            <p>
+                <button type="submit">Submit</button>
+            </p>
+        </fieldset>
+    </form>
+</body>
+</html>
