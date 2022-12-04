@@ -1,6 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
-inline void cube(){
+// inline function declare
+inline void cube(){ 
     int b;
     cin>>b;
     for(int i=1;i<=b;i++){
