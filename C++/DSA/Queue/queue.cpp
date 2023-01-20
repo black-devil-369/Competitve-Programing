@@ -21,12 +21,9 @@ public:
     void del();
     ~Queue();
     int count();
-    Queue &opearator = (Queue &);
+   // Queue &opearator = (Queue &);
 };
-Queue& Queue::opearator = (Queue& Q){
-
-
-}
+//Queue& Queue::opearator = (Queue& Q)
 int Queue::count()
 {
     if (isEmpty())
@@ -54,7 +51,7 @@ Queue::Queue(Queue &Q)
     ptr = new int[capacity];
     int n = Q.count();
     int i = Q.front;
-    while (n)1
+    while (n)
     {
         /* code */
         ptr[i] = Q.ptr[i];

@@ -58,8 +58,7 @@ void insertAttail(Node* &tail,int b){
     tail->next = temp;
     tail = tail->next;
 }
-void insertAtmiddle(int position,int c){
-    
+void insertAtmiddle(){
 }
 // For printing linkedlist 
 void print(Node* &head){
@@ -91,9 +90,11 @@ int main(){
     // adding node at a begin
     Node*head = node1;
     Node*tail = node1;
+    Node*prev_node = node1;
     insertAtbegin(head,56);
     print(head);
     insertAttail(tail,59);
+    //insertAtmiddle(1,3);
    // print1(tail);
    print(head);
     return 0;

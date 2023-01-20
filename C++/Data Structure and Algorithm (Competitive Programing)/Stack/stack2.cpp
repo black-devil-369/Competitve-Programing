@@ -28,6 +28,7 @@ public:
     void pop();
     ~Stack();
     void reverse();
+    //Stack operator=()
 };
 // copy constructure
 Stack::Stack(Stack &S){
@@ -47,7 +48,9 @@ Stack::Stack(Stack &S){
         t = t->next;
         p =n;
     }
-    
+    if(p!=NULL){
+        p->next = NULL;
+    }
 }
 void Stack::reverse()
 {

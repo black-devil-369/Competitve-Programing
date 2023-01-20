@@ -56,8 +56,7 @@ void print(Node* &head){
     cout<<endl;
 }
 int main(){
-    int d;
-    cin>>d;
+    int d = 10;
     Node* node1 = new Node(d);
     // printing elements inside a linked list
     cout<<node1->data<<endl;
