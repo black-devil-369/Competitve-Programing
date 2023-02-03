@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Welcome to the Javascript Learning Tutorials
+        </title>
+        <!--Here we can add javascritp external code -->
+    </head>
+    <body>
+        <!--Javascript code-->
+        <script>
+            // Javascript code 
+            class Vechile{
+                constructor(name,maker,engine){
+                    this.name = name;
+                    this.maker = maker;
+                    this.engine = engine;
+                }
+                getDetail(){
+                    return ('The name of bike is '+ this.name);
+                }
+            }
+            let bike1 = new Vechile('Hayabusa','Suzuki','1900cc');
+            let bike2 = new Vechile('Ninja H2r','Kawasaki','2500cc');
+            console.log(bike1.name);
+            console.log(bike1.maker);
+            console.log(bike1.getDetail());
+        </script>
+    </body>
+</html>
