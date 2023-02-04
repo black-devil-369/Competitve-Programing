@@ -1,5 +1,6 @@
 #include<stdio.h>
 int main(){
+    printf("Hello Wrold");
     int n;
     printf("Enter the number for star printing:\n");
     scanf("%i",&n);
