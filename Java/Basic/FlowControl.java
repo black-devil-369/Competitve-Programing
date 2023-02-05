@@ -39,6 +39,7 @@ class FlowControl{
         break;
         }
         // using of a continue 
+        // by using a 'continue' in any of loop it is skip the value it match with the condition
         for(int i = 0; i<=a;i++){
             if(i%2==0){
                 continue;
