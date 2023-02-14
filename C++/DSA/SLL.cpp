@@ -1,101 +1,131 @@
-/*(
-
-#include<bits/stdc++.h>
-using namespace std;
-class Node{
-    public:
-    int data;
-    Node* next;
-    Node(int data){
-        this->data = data;
-        this->next = NULL;
-    }
-};
-//Node::Node(int data){
-   // this->data =data;
-    //this->next = NULL;
-}
-void insertAtbegin(Node* &head,int d){
-    //creating a new node;
-    Node* temp = new Node(d);
-    temp->next  = head;
-    head = temp;
-}
-void print(Node* &head){
-    Node *temp = head;
-    while(temp!=NULL){
-        cout<<temp->data<<endl;
-        temp = temp->next;
-    }
-}
-int main(){
-    Node* node1 = new Node(12);// creating a clas object node1 ;
-    cout<<node1->data<<endl;
-    cout<<node1->next<<endl;
-    insertAtbegin(head,45);
-    print(head);
-    return 0; 
-}
-*/
 #include<iostream>
+#include<stdio.h>
 using namespace std;
-class Node{
-    public:
+struct node
+{
     int item;
-    Node* next;
-    Node(int data){
-        this->item = data;
-        this->next = NULL;
-    }
+    node *next;
 };
-void insertAtbegin(Node* &head,int d){
-    Node* temp = new Node(d); // creating new node temp
-    temp->next = head;
-    head = temp;
+class SLL
+{
+    private:
+        node *start;
+    public:
+        SLL();
+        void insertAtStart(int);
+        void insertAtLast(int);
+        node* search(int);
+        void insertAfter(node *,int);
+        void deleteFirst();
+        void deleteLast();
+        void deleteNode(node*);
+        ~SLL();
+};
+SLL::~SLL()
+{
+    while(start)
+        deleteFirst();
 }
-void insertAttail(Node* &tail,int b){
-    Node* temp = new Node(b);
-    tail->next = temp;
-    tail = tail->next;
-}
-void insertAtmiddle(){
-}
-// For printing linkedlist 
-void print(Node* &head){
-    Node *temp = head;//creating a new node temp
-    while(temp!=NULL)
+void SLL::deleteNode(node *temp)
+{
+    node *t;
+    if(start==NULL)
+        cout<<"\nUnderflow";
+    else 
     {
-        /* code */
-        cout<<temp->item<<" ";
-        temp = temp->next;
+        if(temp)
+        {
+            if(start==temp)
+            {
+                start=temp->next;
+                delete temp;
+            }
+            else
+            {
+                t=start;
+                while(t->next!=temp)
+                    t=t->next;
+                t->next=temp->next;
+                delete temp;                
+            }
+        }
     }
-    cout<<endl;  
-}
 
-//void print1(Node* &head){
-    //Node*temp = tail;
-    //while (temp!=NULL)
-    //{
-        /* code */
-      //  cout<<tail->item<<" ";
-      //  temp = temp->next;
-  //  }
-    //cout<<endl; 
-int main(){
-    Node *node1 = new Node(10);
-    // printing a linked list;
-    cout<<node1->item<<endl;
-    // printing a address of next node
-    cout<<node1->next<<endl;
-    // adding node at a begin
-    Node*head = node1;
-    Node*tail = node1;
-    Node*prev_node = node1;
-    insertAtbegin(head,56);
-    print(head);
-    insertAttail(tail,59);
-    //insertAtmiddle(1,3);
-   // print1(tail);
-   print(head);
-    return 0;
+}
+void SLL::deleteLast()
+{
+    node *t;
+    if(start==NULL)
+    {
+        cout<<"\nUnderflow";
+    }
+    else if(start->next==NULL)
+    {
+        delete start;
+        start=NULL;
+    }
+    else
+    {
+        t=start;
+        while(t->next->next!=NULL)
+            t=t->next;
+        delete t->next;
+        t->next=NULL;
+    }
+}
+void SLL::deleteFirst()
+{
+    node *t;
+    if(start)
+    {
+        t=start;
+        start=start->next;
+        delete t;
+    }
+}
+void SLL::insertAfter(node *ptr,int data)
+{
+    node *n=new node;
+    n->item=data;
+    n->next=ptr->next;
+    ptr->next=n;
+}
+node* SLL::search(int data)
+{
+    node *t;
+    t=start;
+    while(t!=NULL)
+    {
+        if(t->item==data)
+            return t;
+        t=t->next;
+    }
+    return NULL;
+}
+void SLL::insertAtLast(int data)
+{
+    node *t;
+    node *n=new node;
+    n->item=data;
+    n->next=NULL;
+    if(start==NULL)
+        start=n;
+    else
+    {
+     
+     while(t->next!=NULL)
+        t=t->next;
+     t->next=n;
+    }
+}
+void SLL::insertAtStart(int data)
+{
+    node *n=new node;
+    n->item=data;
+    n->next=start;
+    start=n;
+}
+SLL::SLL()
+{
+    start=NULL;
 }
