@@ -11,6 +11,7 @@ class Portal{
         Console.WriteLine("Your age is : "+age);
         Console.WriteLine("Your emails is :"+emails);
     }
+    //creating constructure
     public Portal(string n1,int a1){
         // using this keywords
         this.name = n1;
