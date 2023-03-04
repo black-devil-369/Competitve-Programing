@@ -13,6 +13,7 @@ void showlist(list<int>l){
     }
 }
 int main(){
+    std::ios_base::sync_with_stdio(NULL);
     list<int>list1;
     for(int i=1;i<10;++i){
         list1.push_back(i*2);
@@ -23,4 +24,10 @@ int main(){
     }
     cout<<"By help of iterator"<<endl;
     showlist(list1);
+    // using all function which is build for list
+    //back(),front(),push_back,push_front,pop_front,pop_back,list::begin(),list::end()
+    //list::rbegin(),list::rend(),list cbegin(),list cend(),list crbegin(),list crend()
+    //empty, insert(),erase(),assign(),remove(),reverse(),resize(),size(),sort(),max_size()
+    //unique(),list::emplace_front() and list::emplace_back(),list::clear(),list::swap(), list splice(), list merge(), 
+    // list emplace;
 }
