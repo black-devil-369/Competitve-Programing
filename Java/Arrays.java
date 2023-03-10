@@ -16,12 +16,22 @@ class Arrays{
         }
         System.out.println("Elements of Arrays Entered by you");
         for(int i=0; i<ajay.length; i++){
-            System.out.println(ajay[i]);
+            System.out.print(ajay[i]+" ");
+        }
+        System.out.println("");
+        System.out.println("Enter the elemet for searching inside a arrays");
+        int x = sr.nextInt();
+        System.out.println("Find the index at which the element are present in array");
+
+        for(int i=0;i<ajay.length;++i){
+            if(ajay[i]==x){
+                System.out.println(i);
+            }
         }
         System.out.println("Enter the size for second dimesion arrays");
         int a = sr.nextInt();
         System.out.println("Enter the elment inside TwoDimensional Arrays");
-        int[] jai = new int[n][a];
+        int[][]jai = new int[n][a];
         for(int i =0; i<jai.length; i++){
             for(int j =0; j<jai.length; j++){
                 jai[i][j]= sr.nextInt();
@@ -30,8 +40,9 @@ class Arrays{
         System.out.println("Element Entered by you inside a Twodimensional arrays");
         for(int i =0; i<jai.length; i++){
             for(int j =0; j<jai.length; j++){
-                System.out.println(jai[i][j]+" ");
+                System.out.print(jai[i][j]+" ");
             }
+            System.out.println("");
         }
     }
 }
