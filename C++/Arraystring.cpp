@@ -39,18 +39,21 @@ int main(){
     cout<<endl;
     //...............3-way...........................
     // crating a array stirng using array class of stl in c++
-    std::array<std::string,5>name1;
-    for(int i =0;i<name1.size();i++){
-        std::cin>>name1[i];
+    std::array<std::string,5>name3;
+    for(int i =0;i<name3.size();i++){
+        std::cin>>name3[i];
     }
-    for(int i=0;i<name1.size();i++){
-        std::cout<<name1[i]<<" ";
+    for(int i=0;i<name3.size();i++){
+        std::cout<<name3[i]<<" ";
     }
     cout<<endl;
     //==========>>>>>>>>>>>>>>:: 4-way:: <<<<<<<<<<<===========
-    // creating a string array by using a pointer arrays;
-    const char* arr1[n];
-    for(int i=0;i<arr1.size();i++){
-        std::cin>>arr1[i];
-    }
+    // creating a string array by using a 2-D arrays;
+    char colour[4][10]
+        = { "Blue", "Red", "Orange", "Yellow" };
+  
+    // Printing Strings stored in 2D array
+    for (int i = 0; i < 4; i++)
+        std::cout << colour[i] << "\n";
+    return 0;   
 }
