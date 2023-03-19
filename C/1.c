@@ -1,6 +1,6 @@
 #include<stdio.h>
 int main(){
-    printf("Hello Wrold");
+    printf("Hello Wrold\n");
     int n;
     printf("Enter the number for star printing:\n");
     scanf("%i",&n);
