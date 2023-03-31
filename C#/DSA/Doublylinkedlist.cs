@@ -45,7 +45,7 @@ class DoublyLinkedlist{
     public void insertAtSpecficNode(Node temp,int data){
         Node n = new Node();
         n.item = data;
-        if(start=null){
+        if(start==null){
             Console.WriteLine("Linkedlist is Empty");
         }
     }
