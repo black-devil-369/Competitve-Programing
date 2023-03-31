@@ -85,8 +85,8 @@ class SSLL{
             }
         }
     }
-    public ~SSLL(){
-        while(start){
+    ~SSLL(){
+        while(start!=null){
             deletefirst();
         }
     }
@@ -110,11 +110,12 @@ public class LinkedList{
         s.insertAtbegin(78);
         s.insertAtEnd(100);
         s.printlist();
-        s.deleteLast();
+        /*s.deleteLast();
         s.printlist();
         s.deletefirst();
         s.deleteSpecficNode(2);
         s.printlist();
         s.deletefirst();
+        */
     }
 }
