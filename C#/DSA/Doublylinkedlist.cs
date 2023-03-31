@@ -12,13 +12,13 @@ class DoublyLinkedlist{
     public void insertAtbegin(int data){
         Node n = new Node();
         n.item=data;
+        n.prev=null;
         if(start==null){
            // n.next =start;
            // n.prev = start;
             start = n;
         }
         else{
-            n.prev=null;
             n.next = start;
             start.prev = n;//start.prev=start;
             start =n;
