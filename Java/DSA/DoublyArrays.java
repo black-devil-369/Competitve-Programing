@@ -1,14 +1,14 @@
-class DoublyArray{
+class DoubleArray{
     private int capacity;
     private int lastindex;
     private int[]ptr;
-    public DoublyArray(int cap){
+    public DoubleArray(int cap){
         capacity=cap;
         lastindex=-1;
         ptr = new int[capacity];
     }
     public void doubleArray(){
-        int temp = new int[2*capacity];
+        int []temp = new int[2*capacity];
         for(int i=0;i<=lastindex;i++){
             temp[i]=ptr[i];
         }
@@ -23,7 +23,7 @@ class DoublyArray{
         return lastindex==-1;
     }
     public void append(int data){
-        if(isFull){
+        if(isFull()){
             doubleArray();
         }
         lastindex++;
@@ -41,5 +41,20 @@ class DoublyArray{
     }
     public int size(){
         return capacity;
+    }
+    void printlndoublearray(){
+        for(int i=0;i<count();i++){
+            System.out.print(get(i)+" ");
+        }
+        System.out.println(" ");
+    }
+}
+// Derive Program
+class DoublyArrays{
+    public static void main(String[] args){
+        DoubleArray d = new DoubleArray(2);
+        d.append(43);
+        d.append(34);
+        d.printlndoublearray();
     }
 }
