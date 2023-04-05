@@ -85,6 +85,13 @@ class Array{
     public ~Array(){
         ptr = null;
     }
+    public void printarray(){
+        int i;
+        for(i=0;i<count();i++){
+            Console.Write(get(i)+" ");
+        }
+        Console.WriteLine(" ");
+    }
 }
 // Deriver Program
 class ADT{
