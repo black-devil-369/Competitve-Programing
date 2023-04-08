@@ -44,6 +44,19 @@ namespace LinkedList{
                 t=t.next;
             }
         }
+        public void reverseLinkedlist(){
+            Node t1,t2;
+            if(start!=null && start.next!=null){
+                t2=null;
+                do
+                {
+                    t1=start;
+                    start = start.next;
+                    t1.next = t2;
+                    t2=t1;
+                } while (start.next!=null);
+            }
+        }
     }// end class 
     
     class Program{
@@ -58,10 +71,12 @@ namespace LinkedList{
             mylist.Add(46);
             mylist.Add(89);
             mylist.Print();
+            mylist.reverseLinkedlist();
+            mylist.Print();
         }
     }
 }
-
+/*
 // Another code for linkedlist without using generic code
 class Node 
 {
@@ -158,4 +173,4 @@ class Node
 // linkedlist program without using generic code
 
 
-
+*/
