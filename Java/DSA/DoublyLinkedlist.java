@@ -1,3 +1,4 @@
+import java.util.*;
 class Node{
     public Node prev;
     public int item;
@@ -62,6 +63,9 @@ class DoublylinkedList{
 // creating a Deriver Program to run the code
 class DoublyLinkedlist{
     public static void main(String[] args){
-        DoublyLinkedlist d = new DoublyLinkedlist();
+        DoublylinkedList d = new DoublylinkedList();
+        d.insertAtbegin(42);
+        d.insertAtbegin(24);
+        d.printlist();
     }
 }
