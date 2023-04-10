@@ -9,6 +9,19 @@ class SSLL{
     public SSLL(){
         start = null;
     }
+    public void reverseLinkedlist(){
+        Node t1,t2;
+        if(start!=null&&start.next!=null){
+            t2=null;
+            do{
+                t1=start;
+                start = start.next;
+                t1.next = t2;
+                t2=t1;
+            }while(start.next!=null);
+            start.next =t1;
+        }
+    }
     public void insertAtbegin(int data){
         Node n = new Node();
         n.item = data;
@@ -78,6 +91,8 @@ public class LinkedList{
         s.insertAtbegin(89);
         s.insertAtbegin(78);
         s.insertAtEnd(100);
+        s.printlist();
+        s.reverseLinkedlist();
         s.printlist();
     }
 }
