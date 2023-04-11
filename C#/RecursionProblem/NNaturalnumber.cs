@@ -22,10 +22,17 @@ namespace NNaturalnumber{
                 Console.WriteLine(2*k-1);
             }
         }
+        // recursive function for Reverse N odd Natural number
         public void RNODD(int k){
             if(k>0){
                 Console.WriteLine(2*k-1);
                 RNODD(k-1);
+            }
+        }
+        public void Neven(int n){
+            if(n>0){
+                Neven(n-1);
+                Console.WriteLine(2*n);
             }
         }
     }
@@ -34,7 +41,10 @@ namespace NNaturalnumber{
             Recursion r = new Recursion();
             Console.WriteLine("The N natural number");
             r.Nnatural(4);
+            Console.WriteLine("The N odd Natural number");
             r.NODD(10);
+            Console.WriteLine("The N even Natural number");
+            r.Neven(6);
         }
     }
 }
