@@ -19,8 +19,20 @@ class SLL
         void deleteFirst();
         void deleteLast();
         void deleteNode(node*);
+        void printAllnode();
+        int count();
+        int numberofNode();
         ~SLL();
 };
+int SLL::numberofNode(){
+    int count=0;
+    node *t = start;
+    while(t!=NULL){
+        count++;
+        t=t->next;
+    }
+    return count;
+}
 SLL::~SLL()
 {
     while(start)
@@ -112,7 +124,7 @@ void SLL::insertAtLast(int data)
         start=n;
     else
     {
-     
+     t=start;
      while(t->next!=NULL)
         t=t->next;
      t->next=n;
@@ -128,4 +140,26 @@ void SLL::insertAtStart(int data)
 SLL::SLL()
 {
     start=NULL;
+}
+void SLL::printAllnode(){
+    node *t;
+    t=start;
+    while(t!=NULL){
+        cout<<t->item<< " ";
+        t=t->next;
+    }
+}
+// deriver Program
+int main(){
+    SLL s1;
+   // s1.insertAtLast(200);
+    s1.insertAtStart(42);
+    s1.insertAtLast(1000);
+    s1.insertAtStart(49);
+    s1.insertAtStart(89);
+    s1.insertAtLast(62);
+    s1.insertAtLast(436);
+    s1.printAllnode();
+    cout<<endl;
+    cout<<s1.numberofNode()<<endl;
 }

@@ -20,6 +20,7 @@ class DLL
         void deleteFirst();
         void deleteLast();
         void deleteNode(node*);
+        void printlist();
         ~DLL();
 };
 DLL::DLL() { start=NULL;}
@@ -119,4 +120,24 @@ void DLL::insertAtStart(int data)
     if(start)
         start->prev=n;
     start=n;
+}
+void DLL::printlist()
+{
+    node *t;
+    t=start;
+    while(t!=NULL){
+        cout<<t->item<<" ";
+        t=t->next;
+    }
+}
+// Deriver Program
+int main()
+{
+    DLL d;
+    d.insertAtStart(67);
+    d.insertAtStart(43);
+    d.insertAtStart(42);
+    d.insertAtStart(89);
+    d.insertAtStart(63);
+    d.printlist();
 }

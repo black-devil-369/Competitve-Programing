@@ -114,7 +114,7 @@ int main()
     obj.append(40);
     obj.append(60);
     obj.insert(1,30);
-
+    obj.count();
     for(int i=0;i<obj.count();i++)
         cout<<obj.get(i)<<" ";
     obj.del(2);

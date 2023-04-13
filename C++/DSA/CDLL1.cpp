@@ -21,6 +21,7 @@ class CDLL
         void deleteFirst();
         void deleteLast();
         void deleteNode(node *);
+        void printlist();
         ~CDLL();
 };
 CDLL::~CDLL()
@@ -148,6 +149,14 @@ CDLL::CDLL()
 {
     start=NULL;
 }
+void CDLL::printlist(){
+    node *t;
+    t=start;
+    while(t->next!=start){
+        cout<<t->item<<" ";
+        t=t->next;
+    }
+}
 // driver Programe
 int main(){
     // create an a vector
@@ -156,4 +165,5 @@ int main(){
     c1.insertAtStart(69);
     c1.insertAtStart(63);
     c1.insertAtStart(90);
+    c1.printlist();
 }

@@ -14,12 +14,13 @@ class CDLL{
     CDLL();// creating a constructure
     void insertAtbegin(int);
     void insertAtend(int);
-    node*search(int);
+    node* search(int);
     void insertAfter(node*,int);
     void deleteFirst();
     void deleteLast();
     void deleteNode(node *);
     ~CDLL();
+    void printlist();
 
 };
 CDLL::~CDLL(){
@@ -144,5 +145,23 @@ void CDLL::insertAtend(int data){
     }
     //n->prev = start->prev;
    // n->next = start->next;
+   void CDLL::printlist(){
+    node *t;
+    t=start;
+    while(t->next->next!=start){
+        cout<<t->item<<" ";
+        t = t->next;
+    }
+    cout<<endl;
+   }
+}
+// Deriver Program
+int main(){
+    CDLL c1;
+    c1.insertAtbegin(67);
+    c1.insertAtbegin(89);
+    c1.insertAtbegin(56);
+    c1.printlist();
+    return 0;
 }
 

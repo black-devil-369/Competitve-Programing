@@ -127,3 +127,20 @@ int DynArray::find(int data)
             return i;
     return -1;
 }
+// Deriver program
+int main(){
+    DynArray d1(3);
+    d1.append(89);
+    d1.append(89);
+    d1.append(78);
+    d1.append(67);
+    d1.append(68);
+    cout<<d1.find(67)<<endl;
+    cout<<d1.count()<<endl;
+    cout<<d1.size()<<endl;
+    for(int i=0;i<d1.count();i++){
+        cout<<d1.get(i)<<" ";
+    }
+    cout<<endl;
+    return 0;
+}

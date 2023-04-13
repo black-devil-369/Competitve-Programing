@@ -1,4 +1,4 @@
-#include<iostream>
+#include<bits/stdc++.h>
 #include "GraphMatrix.cpp"
 #include "QueueArray.cpp"
 #include "DynArray.cpp"
