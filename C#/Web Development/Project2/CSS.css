@@ -1,0 +1,16 @@
+nav{
+    font-size:30px;
+    color:royalblue;
+}
+header{
+    color:black;
+    background-color:white;
+    font-size:80px;
+    text-align:center;
+}
+h1{
+    background-color:red;
+    color:blueviolet;
+    border-radius:13px;
+    border: bottom 5px;
+}

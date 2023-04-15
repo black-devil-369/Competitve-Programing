@@ -97,5 +97,10 @@ class Array{
 class ADT{
     public static void Main(String[] args){
         Array a1 = new Array(5);
+        for(int i=0;i<5;i++){
+            int a = Console.ReadLine();
+            a1.append(a);
+        }
+        a1.printarray();
     }
 }

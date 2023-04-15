@@ -18,7 +18,7 @@ public class Queue{
     }
     public void insertdata(int data){
         if(isFull()){
-            Console.WriteLine("Queue is Alreay Full");
+            Console.WriteLine("Queue is Already Full");
         }
         else if(isEmpty()){
             front=rear=0;
@@ -50,6 +50,17 @@ public class Queue{
         }
     }
     public void del(){
-        
+        if(isEmpty()){
+            Console.WriteLine("Queue if Empty");
+        }
+        else if(front==rear){
+            rear=front=-1;
+        }
+        else if(front==capacity-1){
+            front=0;
+        }
+        else{
+            front++;
+        }
     }
 }
