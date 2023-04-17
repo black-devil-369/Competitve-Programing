@@ -33,6 +33,43 @@ class CircularLinkedList{
             last=n;
         }
     }
+    public void insertAtNode(Node r,int data){
+        if(last!=null){
+            Node n=new Node();
+            n.next=r.next;
+            n.item=data;
+            r.next=n;
+            if(r==last){
+                last=n;
+            }
+        }
+    }
+    public Node search(int data){
+        /*
+        Node r;
+        if(last!=null){
+            r=last;
+            do{
+                if(r.item==data){
+                    return r;
+                }
+                r=r.next;
+            }while(r!=null);
+        }
+        return null;
+        */
+        Node t;
+        if(last!=null){
+            t=last.next;
+            do{
+                if(t.item==data){
+                    return t;
+                }
+                t=t.next;
+            }while(t!=last.next);
+        }
+        return null;
+    }
     public void printlist(){
         Node t;
         t=last;
@@ -41,6 +78,36 @@ class CircularLinkedList{
             t=t.next;
         }while(t!=last);
         Console.WriteLine(" ");
+    }
+    public void deleteFirst(){
+        Node r;
+        if(last!=null){
+            r=last.next;
+            if(last.next==last){
+                last=null;
+            }
+            else{
+                last.next=r.next;
+                r.next=null;
+            }
+        }
+    }
+    public void deleteLast(){
+        Node t;
+        t=last;
+        while(t.next!=last){
+            t=t.next;
+        }
+        // for single node
+        if(t==last){
+            last=null;
+        }
+        // for more than one node
+        else{
+            t.next=last.next;
+            last=null;
+            last=t;
+        }
     }
 }
 // Deriver class
@@ -52,6 +119,7 @@ class CLL{
         c.insertAtbegin(90);
         c.insertAtbegin(100);
         c.insertAtEnd(190);
+        Console.WriteLine(c.search(79));
         c.printlist();
     }
 }
