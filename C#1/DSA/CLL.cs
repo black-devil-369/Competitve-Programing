@@ -109,6 +109,26 @@ class CircularLinkedList{
             last=t;
         }
     }
+    public void deletespecifyNode(Node t){
+        
+    }
+    public void reverselist(){
+        if(last==null){
+            return null;
+        }
+        else{
+            Node t1,t2,t3;
+            t3=null;
+            do{
+                t1=last.next;
+                t2=t1;
+                t1=t1.next;
+                t2.next=t3;
+                t3=t2;
+            }while(t1.next!=last);
+            last.next=t2;
+        }
+    }
 }
 // Deriver class
 class CLL{
@@ -119,7 +139,9 @@ class CLL{
         c.insertAtbegin(90);
         c.insertAtbegin(100);
         c.insertAtEnd(190);
-        Console.WriteLine(c.search(79));
+        //Console.WriteLine(c.search(79));
+        c.printlist();
+        c.reverselist();
         c.printlist();
     }
 }
