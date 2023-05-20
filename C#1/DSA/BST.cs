@@ -112,10 +112,13 @@ class BST
         b.insert(25);
         b.insert(97);
         b.insert(89);
+        Console.WriteLine("The preorder Binary tree Formate");
         b.preorder();
         Console.WriteLine(" ");
+        Console.WriteLine("The postorder Binary tree Formate");
         b.postorder();
         Console.WriteLine(" ");
+        Console.WriteLine("The inorder Binary tree Formate");
         b.inorder();
     }
 }
