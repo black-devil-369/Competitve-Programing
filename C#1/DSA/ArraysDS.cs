@@ -90,6 +90,12 @@ class Arrays{
     ~Arrays(){
         ptr = null;
     }
+    public void reversearray(){
+        int i;
+        for(i=0;i<=lastindex;i++){
+            ptr[i]=ptr[i+1];
+        }
+    }
 }
 // Deriver Class
 class ArraysDS{
@@ -102,6 +108,8 @@ class ArraysDS{
         a.append(40);
         a.append(89);
         a.append(78);
+        a.printarrays();
+        a.reversearray();
         a.printarrays();
     }
 }
