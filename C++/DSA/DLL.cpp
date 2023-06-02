@@ -140,4 +140,5 @@ int main()
     d.insertAtStart(89);
     d.insertAtStart(63);
     d.printlist();
+    cout<<d.search(89)<<endl;
 }

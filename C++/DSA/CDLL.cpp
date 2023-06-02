@@ -96,10 +96,7 @@ node* CDLL::search(int data){
         } while (t!=start);
         
     }
-    else{
-        return NULL;
-    }
-
+    return NULL;
 }
 CDLL::CDLL(){
     start = NULL;
@@ -143,6 +140,7 @@ void CDLL::insertAtend(int data){
         start->prev=n;
        // start =n;
     }
+}
     //n->prev = start->prev;
    // n->next = start->next;
    void CDLL::printlist(){
@@ -154,7 +152,6 @@ void CDLL::insertAtend(int data){
     }
     cout<<endl;
    }
-}
 // Deriver Program
 int main(){
     CDLL c1;

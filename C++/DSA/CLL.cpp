@@ -19,6 +19,7 @@ class CLL
         void deleteFirst();
         void deleteLast();
         void deleteNode(node*);
+        void printlist();
         ~CLL();
 };
 CLL::~CLL()
@@ -138,4 +139,28 @@ void CLL::insertAtStart(int data)
 CLL::CLL()
 {
     last=NULL;
+}
+void CLL::printlist(){
+    node *t;
+    if(last==NULL){
+        cout<<"The list is Empty"<<endl;
+    }
+    else{
+        t=last;
+        do{
+            cout<<t->item<<" ";
+            t=t->next;
+        }while(t!=last);
+        cout<<endl;
+    }
+}
+// Deriver Program
+int main(){
+    CLL c;
+    c.insertAtStart(46);
+    c.insertAtStart(79);
+    c.insertAtStart(90);
+    c.insertAtLast(100);
+    c.printlist();
+    return 0;
 }

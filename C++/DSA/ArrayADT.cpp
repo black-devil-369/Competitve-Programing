@@ -1,4 +1,5 @@
 #include<iostream>
+#include<fstream>
 using namespace std;
 class Array
 {
@@ -17,9 +18,17 @@ class Array
         int get(int);
         int count();
         int find(int);
+        int sum();
         ~Array();
 
 };
+int Array::sum(){
+    int i,sum=0;
+    for(i=0;i<count();i++){
+        sum+=get(i);
+    }
+    return sum;
+}
 int Array::find(int data)
 {
     int i;
@@ -107,21 +116,28 @@ Array::Array(int cap)
 }
 int main()
 {
-    Array obj(5);
+    Array obj(6);
     if(obj.isEmpty())
-        cout<<"Empty Array";
+        cout<<"Empty Array"<<endl;
     obj.append(20);
     obj.append(40);
     obj.append(60);
-    obj.insert(1,30);
+    obj.append(26);
+    obj.append(29);
+    obj.append(50);
+    //obj.insert(1,30);
+    cout<<obj.sum()<<endl;
     obj.count();
+    ofstream writ; // file obj
+    writ.open("arrays2.txt",ios::out); // file obj open method;
     for(int i=0;i<obj.count();i++)
-        cout<<obj.get(i)<<" ";
+        writ<<obj.get(i)<<" ";
     obj.del(2);
     cout<<endl;
     for(int i=0;i<obj.count();i++)
-        cout<<obj.get(i)<<" ";
-    
+        writ<<obj.get(i)<<" ";
     cout<<endl;
+    writ<<obj.sum()<<endl;
+    writ.close();// file close method
     return 0;
 }

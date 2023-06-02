@@ -181,7 +181,7 @@ BST::BST()
 int main()
 {
     BST tree;
-    /*tree.insert(50);
+    tree.insert(50);
     tree.insert(90);
     tree.insert(100);
     tree.insert(30);
@@ -192,8 +192,9 @@ int main()
     cout<<endl;
     tree.inorder();
     cout<<endl;
-    */
-    int b,k;
+    tree.postorder();
+    cout<<endl;
+    /*int b,k;
     cout<<"Enter the no for inserting a element inside a tree"<<endl;
     cin>>k;
    for(int i=1;i<=k;++i){
@@ -201,5 +202,6 @@ int main()
     tree.insert(b);
    }
    tree.inorder();
+   */
     return 0;
 }
