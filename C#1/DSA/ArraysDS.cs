@@ -107,7 +107,10 @@ class ArraysDS{
         a.append(46);
         a.append(40);
         a.append(89);
+        a.append(89);
+        a.del(3);
         a.append(78);
+        a.del(5);
         a.printarrays();
         a.reversearray();
         a.printarrays();
